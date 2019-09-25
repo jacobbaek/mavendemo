@@ -8,7 +8,10 @@ image: maven:3.6.1
 pipelines:
   default:
     - step:
+        name: maven build
         caches:
           - maven
         script: # Modify the commands below to build your repository.
           - mvn -B verify # -B batch mode makes Maven less verbose
+        artifacts:
+          - target/**
