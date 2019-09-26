@@ -14,12 +14,12 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - mvn -B verify # -B batch mode makes Maven less verbose
         artifacts:
-          - target/**
+          - target/**.war
 
     - step:
         name: Deploy to staging
         trigger: manual
         deployment: staging
         script:
-          - ls -al
+          - cd target
           - java -jar *.war 
