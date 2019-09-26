@@ -21,4 +21,5 @@ pipelines:
         trigger: manual
         deployment: staging
         script:
+          - ls -al
           - java -jar *.war 
