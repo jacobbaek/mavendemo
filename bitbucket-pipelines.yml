@@ -27,3 +27,17 @@ pipelines:
               AWS_DEFAULT_REGION: "ap-northeast-2"
               S3_BUCKET: "osci-bitbucket"
               LOCAL_PATH: "target"
+
+    - step:
+        name: deploy by codedeploy
+        script:
+          - pipe: atlassian/aws-code-deploy:0.2.7
+            variables:
+              AWS_DEFAULT_REGION: 'ap-northeast-2'
+              AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              COMMAND: 'upload'
+              APPLICATION_NAME: 'javademoapp'
+              ZIP_FILE: 'javademoapp.zip'
+              S3_BUCKET: 'osci-bitbucket'
+              VERSION_LABEL: 'javademoapp-1.0.0'
