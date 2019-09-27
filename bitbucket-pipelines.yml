@@ -40,7 +40,7 @@ pipelines:
               AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION}
               COMMAND: 'upload'
               APPLICATION_NAME: 'javademoapp'
-              ZIP_FILE: 'demo-0.0.1-SNAPSHOT.war'
+              ZIP_FILE: 'target/demo-0.0.1-SNAPSHOT.war'
 
     - step:
         name: deploy by codedeploy
