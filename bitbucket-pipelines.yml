@@ -36,8 +36,9 @@ pipelines:
               AWS_DEFAULT_REGION: 'ap-northeast-2'
               AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
               AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
-              COMMAND: 'upload'
+              COMMAND: 'deploy'
               APPLICATION_NAME: 'javademoapp'
-              ZIP_FILE: 'demo-0.0.1-SNAPSHOT.war'
+              DEPLOYMENT_GROUP: 'demoapp'
+              WAIT: 'true'
               S3_BUCKET: 'osci-bitbucket'
               VERSION_LABEL: 'javademo-0.0.1'
