@@ -41,7 +41,8 @@ pipelines:
               COMMAND: 'upload'
               APPLICATION_NAME: 'javademoapp'
               ZIP_FILE: 'target/demo-0.0.1-SNAPSHOT.war'
-
+              S3_BUCKET: 'osci-bitbucket'
+              VERSION_LABEL: 'javademoapp-0.0.1'
     - step:
         name: deploy by codedeploy
         script:
@@ -54,5 +55,3 @@ pipelines:
               APPLICATION_NAME: 'javademoapp'
               DEPLOYMENT_GROUP: 'demoapp'
               WAIT: 'true'
-              S3_BUCKET: 'osci-bitbucket'
-              VERSION_LABEL: 'javademoapp-0.0.1'
