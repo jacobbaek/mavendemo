@@ -38,6 +38,6 @@ pipelines:
               AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
               COMMAND: 'upload'
               APPLICATION_NAME: 'javademoapp'
-              ZIP_FILE: 'javademoapp.war'
+              ZIP_FILE: 'demo-0.0.1-SNAPSHOT.war'
               S3_BUCKET: 'osci-bitbucket'
-              VERSION_LABEL: 'javademoapp-1.0.0'
+              VERSION_LABEL: 'javademo-0.0.1'
