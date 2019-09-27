@@ -17,9 +17,13 @@ pipelines:
           - target/**.war
 
     - step:
-        name: Deploy to staging
-        trigger: manual
+        name: deploy into s3
         deployment: staging
         script:
-          - cd target
-          - java -jar *.war 
+          - pipe: atlassian/aws-s3-deploy:0.3.2
+            variables:
+              AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              AWS_DEFAULT_REGION: "ap-northeast-2"
+              S3_BUCKET: "osci-bitbucket"
+              LOCAL_PATH: "target"
