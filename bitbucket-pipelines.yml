@@ -57,7 +57,7 @@ pipelines:
               APPLICATION_NAME: 'javademoapp'
               DEPLOYMENT_GROUP: 'demoapp'
               WAIT: 'true'
-              #VERSION_LABEL: 'javademoapp-0.0.1'
+              VERSION_LABEL: 'javademoapp-0.0.1'
               IGNORE_APPLICATION_STOP_FAILURES: 'true'
               FILE_EXISTS_BEHAVIOR: 'OVERWRITE'
 
