@@ -13,8 +13,10 @@ pipelines:
           - maven
         script: # Modify the commands below to build your repository.
           - mvn -B verify # -B batch mode makes Maven less verbose
+          - apt-get update && apt-get install -y zip
+          - zip javademoapp.zip -r * .[^.]*
         artifacts:
-          - target/**.war
+          - javademoapp.zip
 
 #    - step:
 #        name: deploy into s3
@@ -41,7 +43,7 @@ pipelines:
               COMMAND: 'upload'
               # have to already made application
               APPLICATION_NAME: 'javademoapp'
-              ZIP_FILE: 'target/demo-0.0.1-SNAPSHOT.war'
+              ZIP_FILE: 'javademoapp.zip'
               # have to already made s3bucket
               S3_BUCKET: 'osci-bitbucket'
               VERSION_LABEL: 'javademoapp-0.0.1'
@@ -60,6 +62,4 @@ pipelines:
               WAIT: 'true'
               S3_BUCKET: 'osci-bitbucket'
               VERSION_LABEL: 'javademoapp-0.0.1'
-              IGNORE_APPLICATION_STOP_FAILURES: 'true'
-              FILE_EXISTS_BEHAVIOR: 'OVERWRITE'
 
