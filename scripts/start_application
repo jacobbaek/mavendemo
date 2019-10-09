@@ -1,4 +1,7 @@
 #!/bin/bash
 
-pwd
+# service tomcat7 status && restart
+# ref location : /opt/codedeploy-agent/deployment-root/f7ffc766-d36e-46b2-9dab-4c38a876224b/d-1E5JH04BO/deployment-archive
+# cp *.war /usr/share/tomcat7/webapps/
+
 java -jar target/demo-0.0.1-SNAPSHOT.war
