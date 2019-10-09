@@ -1,3 +1,5 @@
 #!/bin/bash
 
-fuser -k 8080/tcp
+if [[ `fuser 8080/tcp` -eq 0 ]]; then
+    fuser -k 8080/tcp
+fi
