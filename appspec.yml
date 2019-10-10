@@ -4,20 +4,16 @@ files:
   - source: /
     destination: /home/ec2-user/build/
 
-#permissions:
-#  - object: /
-#    pattern: "**"
-#    onwer: ec2-user
-#    onwer: ec2-user
-
-files:
-  - source: target/demo-0.0.1-SNAPSHOT.war
-    destination: /usr/share/tomcat7/webapps/
+#files:
+#  - source: target/*.war
+#    destination: /usr/share/tomcat7/webapps/
+#    overwrite: yes
 
 hooks:
   ApplicationStart:
     - location: scripts/start_application
       timeout: 300
+      runas: root
   ApplicationStop:
     - location: scripts/stop_application
       timeout: 300
