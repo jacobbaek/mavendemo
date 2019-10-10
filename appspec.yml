@@ -1,13 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /target/*.war
-    destination: /usr/share/tomcat7/webapps/
-
-#files:
-#  - source: target/*.war
-#    destination: /usr/share/tomcat7/webapps/
-#    overwrite: yes
+  - source: /
+    destination: /home/ec2-user/build/
 
 hooks:
   ApplicationStart:
