@@ -5,4 +5,4 @@
 # cp *.war /usr/share/tomcat7/webapps/
 
 HOMEPATH=`pwd`
-java -jar $HOMEPATH/target/demo-0.0.1-SNAPSHOT.war
+java -jar $HOMEPATH/deployment-archive/target/demo-0.0.1-SNAPSHOT.war
