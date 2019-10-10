@@ -10,8 +10,8 @@
 	</parent>
 	<groupId>com.jacobbaek</groupId>
 	<artifactId>demo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
+	<version>0.1.0</version>
+	<name>mavendemo</name>
 	<packaging>war</packaging>
 	<description>Demo project for Spring Boot</description>
 
@@ -45,6 +45,14 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+    	<!-- marked the embedded servlet container as provided -->
+    	<dependency>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter-tomcat</artifactId>
+    		<scope>provided</scope>
+    	</dependency>
+
 	</dependencies>
 
 	<build>
