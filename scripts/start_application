@@ -6,5 +6,5 @@
 
 #HOMEPATH=`pwd`
 #java -jar $HOMEPATH/deployment-archive/target/demo-0.0.1-SNAPSHOT.war
-cp -f /home/ec2-user/build/target/*.war /usr/share/tomcat7/webapps/
+cp -f /home/ec2-user/build/target/demo-0.0.1-SNAPSHOT.war /usr/share/tomcat7/webapps/root.war
 service tomcat7 restart
