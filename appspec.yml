@@ -10,6 +10,10 @@ files:
 #    onwer: ec2-user
 #    onwer: ec2-user
 
+files:
+  - source: target/demo-0.0.1-SNAPSHOT.war
+    destination: /usr/share/tomcat7/webapps/
+
 hooks:
   ApplicationStart:
     - location: scripts/start_application
