@@ -4,11 +4,11 @@ files:
   - source: /
     destination: /home/ec2-user/build/
 
-permissions:
-  - object: /
-    pattern: "**"
-    onwer: ec2-user
-    onwer: ec2-user
+#permissions:
+#  - object: /
+#    pattern: "**"
+#    onwer: ec2-user
+#    onwer: ec2-user
 
 hooks:
   ApplicationStart:
